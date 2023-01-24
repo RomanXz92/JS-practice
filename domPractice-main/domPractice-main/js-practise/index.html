@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <a href="#" title="">Текст первой ссылки</a>
+    <a href="#" title="">Текст второй ссылки</a>
+    <a href="#" title="">Текст третьей ссылки</a> -->
+    <!-- Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст. -->
+    <!-- <script>
+
+    const links = document.getElementsByTagName('a')
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('mouseover', func)
+    }
+    function func(){
+        this.title = this.innerHTML
+        console.log(this.title)
+    }
+    console.log(func())
+    
+    </script> -->
+    <!-- <a href="http://ya.ru" title="">Текст первой ссылки</a>
+    <a href="http://tut.by" title="">Текст второй ссылки</a>
+    <a href="http://google.com" title="">Текст третьей ссылки</a> -->
+    <!-- Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках -->
+    <!-- <script>
+      const links = document.getElementsByTagName("a");
+      for (let index = 0; index < links.length; index++) {
+        links[index].addEventListener('mouseover', func)
+      }
+function func(){
+    this.innerHTML += `(${this.href})`
+   //  this.innerHTML = this.innerHTML + "("+ this.href +")"
+    this.removeEventListener('mouseover', func)
+}
+
+    </script> -->
+    <!-- Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит. -->
+    <!-- <p>2</p>
+    <p>4</p>
+    <p>6</p>
+    <script>
+        const p = document.getElementsByTagName('p')
+        for (const item of p) {
+            item.addEventListener('click', func)
+        }
+        function func(){
+            this.innerHTML = this.innerHTML ** 2
+        }
+    </script> -->
+    <!-- Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли свое содержимое на правильное количество символов. 
+    Сколько символов должно быть в инпуте, указывается в атрибуте data-length. 
+    Если вбито правильное количество, то граница инпута становится зеленой, если неправильное - красной. -->
+    <!-- <input type="text" data-length="4" />
+    <input type="text" data-length="7" />
+    <input type="text" data-length="9" />
+    <script>
+      const inputs = document.getElementsByTagName("input");
+      for (const it of inputs) {
+        it.addEventListener("blur", func);
+      }
+      function func() {
+        const currentLength = this.dataset.length;
+        const inputDataLength = this.value.length;
+        if (currentLength == inputDataLength) {
+          this.style.borderColor = "green";
+        } else {
+          this.style.borderColor = "red";
+        }
+      }
+    </script> -->
+    <!-- Даны дивы. По первому нажатию на каждый див он красится красным фоном, по второму красится обратно и так 
+    далее каждый клик происходит чередование фона. Сделайте так, чтобы было две функции: 
+    одна красит в красный цвет, другая в зеленый и они сменяли друг друга через removeEventListener. -->
+    <!-- <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+      const elem = document.getElementsByTagName("div");
+      for (const item of elem) {
+        item.addEventListener("click", setRed);
+      }
+      function setRed() {
+        this.style.background = "red";
+        this.addEventListener("click", setGreen);
+        this.removeEventListener("click", setRed);
+      }
+      function setGreen() {
+        this.style.background = "green";
+        this.addEventListener("click", setGreen);
+        this.removeEventListener("click", setRed);
+      }
+    </script> -->
+    <!-- Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id=&quot;hide&quot;. -->
+    <!-- <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
+    <div id="hide">Текст</div>
+    <script>
+      document.getElementById("hider").onclick = function () {
+        document.getElementById("hide").style.display = "none";
+      };
+    </script> -->
+    <!-- Есть список сообщений. Добавьте каждому сообщению по кнопке для его скрытия. -->
+    <!-- <style>
+      body {
+        margin: 10px auto;
+        width: 470px;
+      }
+      h3 {
+        margin: 0;
+        padding-bottom: 0.3em;
+        font-size: 1.1em;
+      }
+      p {
+        margin: 0;
+        padding: 0 0 0.5em;
+      }
+      .pane {
+        background: #edf5e1;
+        padding: 10px 20px 10px;
+        border-top: solid 2px #c4df9b;
+      }
+    </style>
+    <div>
+      <div class="pane">
+        <h3>Лошадь</h3>
+        <p>
+          Домашняя лошадь — животное семейства непарнокопытных, одомашненный и
+          единственный сохранившийся подвид дикой лошади, вымершей в дикой
+          природе, за исключением небольшой популяции лошади Пржевальского.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Осёл</h3>
+        <p>
+          Домашний осёл или ишак — одомашненный подвид дикого осла, сыгравший
+          важную историческую роль в развитии хозяйства и культуры человека. Все
+          одомашненные ослы относятся к африканским ослам.
+        </p>
+      </div>
+      <div class="pane">
+        <h3>Корова, а также пара слов о диком быке, о волах и о тёлках.</h3>
+        <p>
+          Коро́ва — самка домашнего быка, одомашненного подвида дикого быка,
+          парнокопытного жвачного животного семейства полорогих. Самцы вида
+          называются быками, молодняк — телятами, кастрированные самцы — волами.
+          Молодых (до первой стельности) самок называют тёлками.
+        </p>
+      </div>
+    </div>
+    <script>
+      const paneList = document.getElementsByClassName("pane");
+      for (const item of paneList) {
+        const button = document.createElement("button");
+        button.style.background = "red";
+        button.textContent = "click";
+        item.insertAdjacentElement("beforeend", button);
+      }
+
+      const buttonsList = document.getElementsByTagName("button");
+      for (const item of buttonsList) {
+        item.addEventListener("click", onclick);
+      }
+      function onclick() {
+       // const currentButton = e.currentTarget;
+        this.closest(".pane").remove();
+      }
+    </script> -->
+  </body>
+</html>

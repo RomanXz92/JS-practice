@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .to-do-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .to-do-list-item {
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .to-do-list-item.done {
+            text-decoration: line-through;
+        }
+
+        .to-do-result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="to-do">
+        <ul class="to-do-list" id="to-do-list">
+            <li class="to-do-list-item">Купить еды</li>
+            <li class="to-do-list-item">Погладить кота</li>
+            <li class="to-do-list-item">Смазать раны йодом</li>
+        </ul>
+
+        <p id="to-do-result" class="to-do-result">Сделано дел: 0</p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

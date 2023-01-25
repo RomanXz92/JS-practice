@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-menu-link {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid red;
+            color: red;
+            text-decoration: none;
+        }
+
+        .main-menu-link.active {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main-menu" id="main-menu">
+        <li>
+            <a class="main-menu-link" href="#">Home page</a>
+        </li>
+        <li>
+            <a class="main-menu-link" href="#">My books page</a>
+        </li>
+        <li>
+            <a class="main-menu-link" href="#">Contacts page</a>
+        </li>
+    </ul>
+    <script src="./script.js"></script>
+</body>
+</html>
